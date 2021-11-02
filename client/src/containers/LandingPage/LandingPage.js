@@ -4,6 +4,9 @@ import intro_mobile from "./assets/img/logo3.png";
 import logo from "./assets/img/logo1.png"
 import git_logo from "./assets/img/GitHub-Mark-32px.png"
 import rpi_logo from "./assets/img/rpi_logo.png"
+import Navbar from './Navbar';
+import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 
 class landing extends Component {
   render() {
@@ -11,49 +14,12 @@ class landing extends Component {
       <div>
         <header id="header-wrap">
           {/* Navbar Start */}
-          <nav className="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar">
-            <div className="container navbar-style">
-              {/* Brand and toggle get grouped for better mobile display */}
-              <a href="index.html" className="navbar-brand">
-                <img src={logo} alt />
-              </a>
-              <button
-                className="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarCollapse"
-                aria-controls="navbarCollapse"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <i className="lni-menu" />
-              </button>
-              <div className="collapse navbar-collapse" id="navbarCollapse">
-                <ul className="navbar-nav mr-auto w-100 justify-content-end clearfix">
-                  <li className="nav-item active">
-                    <a className="nav-link" href="#hero-area">
-                      Home
-                      </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="#services">
-                      Services
-                      </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="#team">
-                      Team
-                      </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="#contact">
-                      Contact
-                      </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+          <Router>
+            <Navbar />
+            <Switch>
+              <Route path='/' exact />
+            </Switch>
+            </Router>
           {/* Navbar End */}
           {/* Hero Area Start */}
           <div id="hero-area" className="hero-area-bg">
