@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import classNames from "classnames";
 import { Navbar, Button } from "reactstrap";
 import Settings from "../../components/tutorComponents/settings";
+import Overview from "../../components/tutorComponents/overview";
 import Analytics from "../../components/tutorComponents/data";
 import { TutorHistory } from "./TutorHistory";
 import Dashboard from "./Dashboard";
@@ -37,6 +38,7 @@ export const Panel = (props: IProps) => {
                 <Button variant="danger">Drop Course</Button>
 
             </div> */}
+            {extension === "overview" ? <Overview></Overview> : null}
             {extension === "schedule" ? <Settings></Settings> : null}
             {extension === "meetings" ? <div>Hello World(Meetings)</div> : null}
             {extension === "history" ? <TutorHistory></TutorHistory> : null}

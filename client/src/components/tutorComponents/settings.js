@@ -512,6 +512,7 @@ class Settings extends Component {
                         onChange={this.handlePriceChange}
                       />
                       <div className='value'>${this.state.temp_price}</div>
+                      <input type='text' id='pinputtext' name='pinputtext' value={this.state.temp_price}></input>
                     </div>
                   </ModalBody>
                   <ModalFooter>

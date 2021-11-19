@@ -13,7 +13,7 @@ export const  Sidebar =(params:IParams) =>  {
                 <ListGroup>
                 {params.mode === "Tutor" ? (
                     <div>
-                    <ListGroupItem tag="a" href="/tutor/meetings" className={classNames("list-group-item", "bg-none", "tab-active")}><FontAwesomeIcon icon={faCube} />Overview</ListGroupItem>
+                    <ListGroupItem tag="a" href="/tutor/overview" className={classNames("list-group-item", "bg-none", "tab-active")}><FontAwesomeIcon icon={faCube} />Overview</ListGroupItem>
                     <ListGroupItem tag="a" href="/tutor/preferences" className={classNames("list-group-item", "bg-none", "tab-active")}><FontAwesomeIcon icon={faUserClock} />Schedule Preferences</ListGroupItem>
                     <ListGroupItem tag="a" href="/tutor/meetings" className={classNames("list-group-item", "bg-none")}><FontAwesomeIcon icon={faCalendar} />Upcoming Meetings</ListGroupItem>
                     <ListGroupItem tag="a" href="/tutor/history" className={classNames("list-group-item", "bg-none")}><FontAwesomeIcon icon={faHistory} />History</ListGroupItem>
